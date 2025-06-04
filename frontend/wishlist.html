@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wishlist - M&C Online Store</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <div class="topbar">
+    <div class="contacto">
+      <i class="fas fa-phone"></i> Atención al cliente: 7741-3534
+      <i class="fab fa-whatsapp"></i> WhatsApp: 6056-0117
+    </div>
+  </div>
+  <header class="main-header">
+  <div class="logo" onclick="location.href='index.html'" style="cursor: pointer;">
+    <img src="assets/img/MC-logo.png" alt="M&C Online Store" class="logo-img">
+  </div>
+
+<div class="icons">
+  <div class="icon-item" onclick="location.href='pedidos.html'">
+    <i class="fas fa-box"></i><span>Mis Pedidos</span>
+  </div>
+ <div class="icon-item" id="icono-usuario">
+    <i class="fas fa-user"></i>
+    <span id="usuario-nombre">Mi Cuenta</span>
+  </div>
+  <div class="icon-item hidden" id="cerrar-sesion">
+    <i class="fas fa-sign-out-alt"></i>
+    <span>Cerrar Sesión</span>
+  </div>
+  <div class="icon-item" onclick="location.href='cart.html'">
+    <i class="fas fa-shopping-cart"></i><span>Mi Carrito</span>
+  </div>
+  </header>
+  <main id="wishlist-container" class="product-grid">
+  </main>
+  <script src="js/wishlist.js"></script>
+</body>
+</html>

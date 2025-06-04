@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Iniciar Sesión - M&C Online Store</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Iniciar Sesión</h2>
+    <form id="form-login">
+      <input type="email" id="correo" placeholder="Correo electrónico" required />
+      <input type="password" id="contrasena" placeholder="Contraseña" required />
+      <button type="submit">Ingresar</button>
+    </form>
+    <div style="text-align: center; margin-top: 1rem;">
+    <button id="btn-invitado" style="background: #555; color: #fff; padding: 0.5rem 1rem; border: none; border-radius: 5px; cursor: pointer;">
+    Ingresar como Invitado
+    </button>
+    </div>
+    <p style="text-align: center; margin-top: 1rem;">
+      ¿No tienes una cuenta? <a href="register.html" style="color: #e60073; font-weight: bold;">Regístrate aquí</a>
+    </p>
+  </div>
+  <script src="js/login.js"></script>
+</body>
+</html>
