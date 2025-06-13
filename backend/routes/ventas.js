@@ -8,17 +8,14 @@ router.post('/finalizar', async (req, res) => {
   let total = 0;
 
   try {
-    // Calcular total
     for (const item of carrito) {
       const [prod] = await db.promise().query('SELECT precio FROM productos WHERE id = ?', [item.id]);
       total += prod[0].precio * item.cantidad;
     }
 
-    // Registrar venta
     const [venta] = await db.promise().query('INSERT INTO venta (fecha, total) VALUES (?, ?)', [fecha, total]);
     const ventaId = venta.insertId;
 
-    // Registrar detalles y actualiza stock
     for (const item of carrito) {
       const [prod] = await db.promise().query('SELECT precio, stock FROM productos WHERE id = ?', [item.id]);
 
@@ -45,7 +42,6 @@ router.post('/finalizar', async (req, res) => {
   }
 });
 
-// Obtener todas las ventas
 router.get('/', async (req, res) => {
   try {
     const [rows] = await db.promise().query('SELECT * FROM venta ORDER BY fecha DESC');
@@ -55,7 +51,6 @@ router.get('/', async (req, res) => {
   }
 });
 
-// Obtener detalle de una venta
 router.get('/:id', async (req, res) => {
   try {
     const ventaId = req.params.id;
