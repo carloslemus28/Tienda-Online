@@ -1,0 +1,1 @@
+Este es un proyecto simple pero fue creado para demostrar habnilidades creando una pagina web con seguridad, filtros de usuarios registrados o usuarios que entraron como invitados, muestra las imagenes guardadas en una base de datos entre más.
